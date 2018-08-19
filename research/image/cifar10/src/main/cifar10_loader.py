@@ -18,20 +18,6 @@ CIFAR_10_HEIGHT = 32
 CIFAR_10_CHANNELS = 3
 CIFAR_10_LABELS = []
 
-class CIFAR10Record:
-
-    def __init__(self):
-        self.height = 32
-        self.width = 32
-        self.depth = 3
-        self.source = "dummy"
-        self.sequence = -1
-        self.label = -1
-
-
-def unpack_cifar_file():
-    pass
-
 
 def load_data_set(cifar10_dir = DEFAULT_CIFAR_DATA_DIR,
                   cifar10_format = TAR_GZ_FORMAT,
@@ -50,8 +36,8 @@ def load_data_set(cifar10_dir = DEFAULT_CIFAR_DATA_DIR,
     reader = FixedLengthRecordReader(cifar10_files, CIFAR_10_RECORD_SIZE)
 
     # TODO hardcoded length
-    cifar10_image_list = [None]*50000
-    cifar10_label_list = [None]*50000
+    cifar10_image_list = [None]*(50000 if max_records == -1 else max_records)
+    cifar10_label_list = [None]*(50000 if max_records == -1 else max_records)
     record_number = 0
 
     sequence, record, source = reader.read()
