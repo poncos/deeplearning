@@ -57,8 +57,6 @@ def load_data_set(cifar10_dir = DEFAULT_CIFAR_DATA_DIR,
         r = record_image[0:1024].reshape((CIFAR_10_WIDTH, CIFAR_10_HEIGHT))
         b = record_image[1024:2048].reshape((CIFAR_10_WIDTH, CIFAR_10_HEIGHT))
         g = record_image[2048:3072].reshape((CIFAR_10_WIDTH, CIFAR_10_HEIGHT))
-        # TODO this line adds one second to the time needed to load the entire cifar10 data set
-        # record_obj.payload = np.dstack((r, g, b))
         # TODO this tolist takes long time in the overall data-set loading
         image = np.dstack((r, g, b)).tolist()
 

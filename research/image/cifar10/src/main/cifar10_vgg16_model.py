@@ -4,8 +4,6 @@
 
 import tensorflow as tf
 
-import numpy as np
-
 DEFAULT_VARIABLE_NAMES = ['conv1', 'conv2', 'conv3', 'conv4', 'fc1', 'fc2', 'softmax_linear']
 
 BATCH_SIZE = 200
@@ -24,6 +22,8 @@ def create_placeholder():
 
     return x_placeholder, y_placeholder
 
+def crateVariables():
+    pass
 
 def forward_propagation(input=input, variable_names=DEFAULT_VARIABLE_NAMES, batch_size=BATCH_SIZE):
 
@@ -120,13 +120,5 @@ def backward_propagation(cost, learning_rate=0.0001):
     optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(cost)
 
     return optimizer
-
-
-def model(total_loss, global_step):
-    pass
-
-
-def cifar10_main():
-    print("train")
 
 
