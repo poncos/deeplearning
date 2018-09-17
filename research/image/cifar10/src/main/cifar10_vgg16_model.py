@@ -17,13 +17,11 @@ LABELS_PLACEHOLDER = 'Y_LABELS'
 
 
 def create_placeholder():
-    x_placeholder = tf.placeholder(tf.float32, [BATCH_SIZE, IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_DEPTH], name=INPUT_PLACEHOLDER)
-    y_placeholder = tf.placeholder(tf.int32, [BATCH_SIZE], name=LABELS_PLACEHOLDER)
+    x_placeholder = tf.placeholder(tf.float32, [None, IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_DEPTH], name=INPUT_PLACEHOLDER)
+    y_placeholder = tf.placeholder(tf.int32, [None], name=LABELS_PLACEHOLDER)
 
     return x_placeholder, y_placeholder
 
-def crateVariables():
-    pass
 
 def forward_propagation(input=input, variable_names=DEFAULT_VARIABLE_NAMES, batch_size=BATCH_SIZE):
 
@@ -77,11 +75,13 @@ def forward_propagation(input=input, variable_names=DEFAULT_VARIABLE_NAMES, batc
     pool2 = tf.nn.max_pool(conv4, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1],
                            padding='SAME', name='pool4')
 
+    # Currently dimension BATCH_SIZEx8x8x64=NUM_BATCH_SIZEx4096
+
     with tf.variable_scope(variable_names[4]) as scope:
         flattened_conv = tf.reshape(pool2, [batch_size, -1])
 
-        fc_weights_dim1 = flattened_conv.get_shape()[1].value
-        fc_weights = tf.get_variable('weights', shape=[fc_weights_dim1, 384],
+        # fc_weights_dim1 = flattened_conv.get_shape()[1].value
+        fc_weights = tf.get_variable('weights', shape=[4096, 384],
                                      initializer=tf.truncated_normal_initializer(stddev=5e-2, dtype=tf.float32)
                                      )
 

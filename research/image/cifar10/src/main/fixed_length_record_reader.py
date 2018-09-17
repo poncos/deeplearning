@@ -27,7 +27,6 @@ class FixedLengthRecordReader:
 
         # print("Reading record from memory starting in position ", self.__offset)
         if self.__buffer is None and self.__current_file < len(self.__file_names):
-            print("Reading file ", len(self.__file_names), " - ", self.__current_file," - ", self.__file_names[self.__current_file])
             self.__buffer = np.fromfile(self.__file_names[self.__current_file],
                                         dtype=np.ubyte, count=-1)
             self.__current_file += 1
@@ -35,11 +34,8 @@ class FixedLengthRecordReader:
             self.__sequence = -1
 
         if self.__buffer is not None and self.__offset <= (len(self.__buffer)-self.__record_bytes):
-            # print("Buffer ", len(self.__buffer), " ", self.__buffer)
-            # print("Reading record with offset: ", self.__offset)
             # WARNING this function will return a reference to the same data
             record = self.__buffer[self.__offset:self.__offset + self.__record_bytes]
-            # print("Record: ", record)
             self.__offset += self.__record_bytes
             self.__sequence += 1
 

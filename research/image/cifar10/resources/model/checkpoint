@@ -1,0 +1,6 @@
+model_checkpoint_path: "/tmp/model/-980"
+all_model_checkpoint_paths: "/tmp/model/-900"
+all_model_checkpoint_paths: "/tmp/model/-920"
+all_model_checkpoint_paths: "/tmp/model/-940"
+all_model_checkpoint_paths: "/tmp/model/-960"
+all_model_checkpoint_paths: "/tmp/model/-980"

@@ -7,6 +7,9 @@ import tarfile
 import os
 import numpy as np
 
+import tempfile
+import shutil
+
 DEFAULT_CIFAR_DATA_DIR = '/data/deeplearning/input'
 DEFAULT_CIFAR_INPUT_FILE = 'cifar-10-binary.tar.gz'
 
@@ -19,19 +22,33 @@ CIFAR_10_CHANNELS = 3
 CIFAR_10_LABELS = []
 
 
-def load_data_set(cifar10_dir = DEFAULT_CIFAR_DATA_DIR,
-                  cifar10_format = TAR_GZ_FORMAT,
-                  cifar10_input_file = DEFAULT_CIFAR_INPUT_FILE,
-                  max_records=-1):
+class LoaderDataSetConfig:
+    cifar_data_dir = DEFAULT_CIFAR_DATA_DIR
+    cifar_input_file = DEFAULT_CIFAR_INPUT_FILE
+    cifar_package_format = TAR_GZ_FORMAT
+    max_records=-1
+    load_evaluate_dataset = False
+
+
+def load_data_set(cifar10_dir=DEFAULT_CIFAR_DATA_DIR,
+                  cifar10_format=TAR_GZ_FORMAT,
+                  cifar10_input_file=DEFAULT_CIFAR_INPUT_FILE,
+                  max_records=-1,
+                  evaluate=False):
+    dirpath = tempfile.mkdtemp()
+    print("Unpacking the cifar10 dataset in the path %s" % dirpath)
 
     if cifar10_format == TAR_GZ_FORMAT:
         fname = os.path.join(cifar10_dir, cifar10_input_file)
         tar = tarfile.open(fname, "r:gz")
-        tar.extractall(path='/tmp')
+        tar.extractall(path=dirpath)
         tar.close()
 
     # TODO hardcoded paths
-    cifar10_files = [os.path.join('/tmp/cifar-10-batches-bin', 'data_batch_%d.bin' % i) for i in range(1, 6)]
+    if not evaluate:
+        cifar10_files = [os.path.join(dirpath, 'cifar-10-batches-bin', 'data_batch_%d.bin' % i) for i in range(1, 6)]
+    else:
+        cifar10_files = [os.path.join(dirpath, 'cifar-10-batches-bin/test_batch.bin')]
 
     reader = FixedLengthRecordReader(cifar10_files, CIFAR_10_RECORD_SIZE)
 
@@ -69,7 +86,4 @@ def load_data_set(cifar10_dir = DEFAULT_CIFAR_DATA_DIR,
 
     return cifar10_label_list, cifar10_image_list
 
-
-def reshape_images():
-    pass
 
