@@ -1,6 +1,6 @@
 import unittest
 
-import main.cifar10_loader as cl
+import cifar10.cifar10_loader as cl
 
 
 class FixedLengthRecordReaderTestCase(unittest.TestCase):

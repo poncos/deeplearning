@@ -1,7 +1,7 @@
 import unittest
 
-import main.cifar10_loader as cl
-import main.cifar10_vgg16_model as cm
+import cifar10.cifar10_loader as cl
+import cifar10.cifar10_vgg16_model as cm
 
 import numpy as np
 

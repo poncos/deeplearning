@@ -1,7 +1,7 @@
 import unittest
 
-import main.cifar10_loader as cl
-import main.tensor_flow_cnn_examples as tfe
+import cifar10.cifar10_loader as cl
+import cifar10.tensor_flow_cnn_examples as tfe
 
 
 class FixedLengthRecordReaderTestCase(unittest.TestCase):

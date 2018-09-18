@@ -1,7 +1,7 @@
 
 import numpy as np
 import math
-import time
+
 
 class Dimension2d:
     width = 0
@@ -42,7 +42,7 @@ def convolve_2d(image, kernel):
     return result
 
 
-def convolve_1d_gitrgb(image, dimension2d, targetdimension):
+def convolve_1d_rgb(image, dimension2d, targetdimension):
     # millis_before = int(round(time.time() * 1000))
     kernel_w = dimension2d.width // targetdimension.width
     kernel_h = dimension2d.height // targetdimension.height

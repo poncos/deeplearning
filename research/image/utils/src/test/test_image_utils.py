@@ -5,6 +5,12 @@ from tkinter import *
 
 from PIL import Image
 import time
+import os
+
+CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+
+TEST_IMAGE_FILE_NAME = os.path.join(CURRENT_DIR_PATH, '../../../cifar10/resources/test/images/cat3.jpg')
+
 
 class ImageUtilsTestCase(unittest.TestCase):
 
@@ -17,10 +23,11 @@ class ImageUtilsTestCase(unittest.TestCase):
         print("Convolution result: ", result)
 
     def test_convolve_1d(self):
-        img = Image.open("/store/datasets/downloaded_images/animals/cat/cat3.jpg", mode="r")
+        # img = Image.open("/store/datasets/downloaded_images/animals/cat/cat3.jpg", mode="r")
+        img = Image.open(TEST_IMAGE_FILE_NAME, mode="r")
         img_bytes = img.tobytes()
         dimension = iutils.Dimension2d(img.size[0], img.size[1])
-        targetdimension = iutils.Dimension2d(32, 32)
+        targetdimension = iutils.Dimension2d(250, 250)
 
         millis_before = int(round(time.time() * 1000))
         result = iutils.convolve_1d_rgb(img_bytes, dimension, targetdimension)
@@ -40,8 +47,8 @@ class ImageUtilsTestCase(unittest.TestCase):
         photo_image = PhotoImage(width=800, height=800)
         canvas.create_image(0, 0, anchor=NW, image=photo_image)
 
-        for x in range(32):
-            for y in range(32):
+        for x in range(250):
+            for y in range(250):
                 r = "%0.2X" % result[x][y][0]
                 g = "%0.2X" % result[x][y][1]
                 b = "%0.2X" % result[x][y][2]

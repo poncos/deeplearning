@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from main.fixed_length_record_reader import FixedLengthRecordReader
+from cifar10.fixed_length_record_reader import FixedLengthRecordReader
 
 TEST_DATA_FILENAME_1 = os.path.join(os.path.dirname(__file__), '../../resources/test/data_batch_5.bin')
 TEST_DATA_FILENAME_2 = os.path.join(os.path.dirname(__file__), '../../resources/test/data_batch_4.bin')
