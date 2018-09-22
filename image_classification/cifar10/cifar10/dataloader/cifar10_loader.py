@@ -2,72 +2,69 @@
 #
 # Licensed under the MIT License
 
-from main.fixed_length_record_reader import FixedLengthRecordReader
+from fixed_length_record_reader import FixedLengthRecordReader
+import cifar10.constants as constants
+
 import tarfile
 import os
 import numpy as np
 
 import tempfile
-import shutil
-
-DEFAULT_CIFAR_DATA_DIR = '/data/deeplearning/input'
-DEFAULT_CIFAR_INPUT_FILE = 'cifar-10-binary.tar.gz'
-
-TAR_GZ_FORMAT = 'tar.gz'
 
 CIFAR_10_RECORD_SIZE = 3073
 CIFAR_10_WIDTH = 32
 CIFAR_10_HEIGHT = 32
-CIFAR_10_CHANNELS = 3
-CIFAR_10_LABELS = []
+
+print("([%s], [%s], [%s])" % (constants.LOCAL_ROOT_DIR, constants.DATA_DIR, constants.DATA_DIR_PATH))
 
 
 class LoaderDataSetConfig:
-    cifar_data_dir = DEFAULT_CIFAR_DATA_DIR
-    cifar_input_file = DEFAULT_CIFAR_INPUT_FILE
-    cifar_package_format = TAR_GZ_FORMAT
-    max_records=-1
+    cifar_data_dir = constants.DATA_DIR_PATH
+    cifar_input_file = 'cifar-10-binary'
+    cifar_input_file_ext = '.tar.gz'
+    max_records = -1
     load_evaluate_dataset = False
 
 
-def load_data_set(cifar10_dir=DEFAULT_CIFAR_DATA_DIR,
-                  cifar10_format=TAR_GZ_FORMAT,
-                  cifar10_input_file=DEFAULT_CIFAR_INPUT_FILE,
-                  max_records=-1,
-                  evaluate=False):
+def unpack_dataset(config):
     dirpath = tempfile.mkdtemp()
     print("Unpacking the cifar10 dataset in the path %s" % dirpath)
 
-    if cifar10_format == TAR_GZ_FORMAT:
-        fname = os.path.join(cifar10_dir, cifar10_input_file)
-        tar = tarfile.open(fname, "r:gz")
-        tar.extractall(path=dirpath)
-        tar.close()
+    fname = os.path.join(config.cifar_data_dir, config.cifar_input_file + config.cifar_input_file_ext)
+    tar = tarfile.open(fname, "r:gz")
+    tar.extractall(path=dirpath)
+    tar.close()
 
-    # TODO hardcoded paths
-    if not evaluate:
+    if not config.load_evaluate_dataset:
         cifar10_files = [os.path.join(dirpath, 'cifar-10-batches-bin', 'data_batch_%d.bin' % i) for i in range(1, 6)]
     else:
         cifar10_files = [os.path.join(dirpath, 'cifar-10-batches-bin/test_batch.bin')]
 
+    return cifar10_files
+
+
+def load_data_set(config):
+
+    cifar10_files = unpack_dataset(config)
+    if not cifar10_files:
+        raise Exception('Dataset not available in path [%s] and file name [%s]'
+                        % (config.cifar_data_dir, config.cifar_input_file + config.cifar_input_file_ext))
+
     reader = FixedLengthRecordReader(cifar10_files, CIFAR_10_RECORD_SIZE)
+    num_records = reader.count()
 
     # TODO hardcoded length
-    cifar10_image_list = [None]*(50000 if max_records == -1 else max_records)
-    cifar10_label_list = [None]*(50000 if max_records == -1 else max_records)
+    cifar10_image_list = [None]*(num_records if config.max_records == -1 else config.max_records)
+    cifar10_label_list = [None]*(num_records if config.max_records == -1 else config.max_records)
     record_number = 0
 
     sequence, record, source = reader.read()
     print("Read ", len(record), " records")
 
     while record is not None:
-        if max_records != -1 and record_number == max_records:
+        if config.max_records != -1 and record_number == config.max_records:
             break
 
-        # print("record number: ", sequence, " from source: ", source)
-        # record_obj = CIFAR10Record()
-        # record_obj.source = source
-        # record_obj.sequence = sequence
         record_label = record[0]
         record_image = record[1:3073].astype(np.float32, copy=False)
 
@@ -80,7 +77,6 @@ def load_data_set(cifar10_dir=DEFAULT_CIFAR_DATA_DIR,
         cifar10_label_list[record_number] = record_label
         cifar10_image_list[record_number] = image
 
-        # cifar10_record_list[record_number] = record_obj
         sequence, record, source = reader.read()
         record_number += 1
 

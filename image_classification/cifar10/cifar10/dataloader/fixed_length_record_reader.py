@@ -2,6 +2,7 @@
 #
 # Licensed under the MIT License
 import numpy as np
+import os
 
 
 class FixedLengthRecordReader:
@@ -14,6 +15,7 @@ class FixedLengthRecordReader:
         self.__buffer = None
         self.__offset = 0
         self.__sequence = -1
+        self.__total_bytes = -1
 
     def reset_offset(self):
         self.__offset = 0
@@ -46,3 +48,15 @@ class FixedLengthRecordReader:
 
         return None, None, None
 
+    def count(self):
+        if self.__total_bytes == -1:
+            self.__total_bytes = self.__count_bytes()
+
+        return self.__total_bytes//self.__record_bytes
+
+    def __count_bytes(self):
+        total_size = 0
+        for file in self.__file_names:
+            total_size += os.path.getsize(file)
+
+        return total_size
