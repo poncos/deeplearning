@@ -8,55 +8,55 @@ import os
 class FixedLengthRecordReader:
 
     def __init__(self, file_names, record_bytes):
-        self.__record_bytes = record_bytes
-        self.__file_names = file_names
+        self.record_bytes = record_bytes
+        self.file_names = file_names
 
-        self.__current_file = 0
-        self.__buffer = None
-        self.__offset = 0
-        self.__sequence = -1
-        self.__total_bytes = -1
+        self.current_file = 0
+        self.buffer = None
+        self.offset = 0
+        self.sequence = -1
+        self.total_bytes = -1
 
     def reset_offset(self):
-        self.__offset = 0
+        self.offset = 0
 
     def reset(self):
-        self.__current_file = 0
-        self.__buffer = None
-        self.__offset = 0
+        self.current_file = 0
+        self.buffer = None
+        self.offset = 0
 
     def read(self):
 
         # print("Reading record from memory starting in position ", self.__offset)
-        if self.__buffer is None and self.__current_file < len(self.__file_names):
-            self.__buffer = np.fromfile(self.__file_names[self.__current_file],
+        if self.buffer is None and self.current_file < len(self.file_names):
+            self.buffer = np.fromfile(self.file_names[self.current_file],
                                         dtype=np.ubyte, count=-1)
-            self.__current_file += 1
-            self.__offset = 0
-            self.__sequence = -1
+            self.current_file += 1
+            self.offset = 0
+            self.sequence = -1
 
-        if self.__buffer is not None and self.__offset <= (len(self.__buffer)-self.__record_bytes):
+        if self.buffer is not None and self.offset <= (len(self.buffer)-self.record_bytes):
             # WARNING this function will return a reference to the same data
-            record = self.__buffer[self.__offset:self.__offset + self.__record_bytes]
-            self.__offset += self.__record_bytes
-            self.__sequence += 1
+            record = self.buffer[self.offset:self.offset + self.record_bytes]
+            self.offset += self.record_bytes
+            self.sequence += 1
 
-            if self.__offset >= len(self.__buffer):
-                self.__buffer = None
+            if self.offset >= len(self.buffer):
+                self.buffer = None
 
-            return self.__sequence, record, self.__file_names[self.__current_file-1]
+            return self.sequence, record, self.file_names[self.current_file-1]
 
         return None, None, None
 
     def count(self):
-        if self.__total_bytes == -1:
-            self.__total_bytes = self.__count_bytes()
+        if self.total_bytes == -1:
+            self.total_bytes = self.__count_bytes()
 
-        return self.__total_bytes//self.__record_bytes
+        return self.total_bytes//self.record_bytes
 
     def __count_bytes(self):
         total_size = 0
-        for file in self.__file_names:
+        for file in self.file_names:
             total_size += os.path.getsize(file)
 
         return total_size

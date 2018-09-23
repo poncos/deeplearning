@@ -2,7 +2,7 @@
 #
 # Licensed under the MIT License
 
-from fixed_length_record_reader import FixedLengthRecordReader
+from cifar10.dataloader.fixed_length_record_reader import FixedLengthRecordReader
 import cifar10.constants as constants
 
 import tarfile
@@ -15,8 +15,6 @@ CIFAR_10_RECORD_SIZE = 3073
 CIFAR_10_WIDTH = 32
 CIFAR_10_HEIGHT = 32
 
-print("([%s], [%s], [%s])" % (constants.LOCAL_ROOT_DIR, constants.DATA_DIR, constants.DATA_DIR_PATH))
-
 
 class LoaderDataSetConfig:
     cifar_data_dir = constants.DATA_DIR_PATH
@@ -24,6 +22,9 @@ class LoaderDataSetConfig:
     cifar_input_file_ext = '.tar.gz'
     max_records = -1
     load_evaluate_dataset = False
+
+
+DEFAULT_CONFIG = LoaderDataSetConfig
 
 
 def unpack_dataset(config):
@@ -43,7 +44,7 @@ def unpack_dataset(config):
     return cifar10_files
 
 
-def load_data_set(config):
+def load_data_set(config=DEFAULT_CONFIG):
 
     cifar10_files = unpack_dataset(config)
     if not cifar10_files:
@@ -53,7 +54,6 @@ def load_data_set(config):
     reader = FixedLengthRecordReader(cifar10_files, CIFAR_10_RECORD_SIZE)
     num_records = reader.count()
 
-    # TODO hardcoded length
     cifar10_image_list = [None]*(num_records if config.max_records == -1 else config.max_records)
     cifar10_label_list = [None]*(num_records if config.max_records == -1 else config.max_records)
     record_number = 0

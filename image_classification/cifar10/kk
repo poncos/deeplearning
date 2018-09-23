@@ -1,0 +1,402 @@
+Read record number  100
+Record:  (99, array([  4, 134, 140, ..., 164, 152, 163], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  200
+Record:  (199, array([  7, 126,  92, ..., 114, 104,  94], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  300
+Record:  (299, array([  4,  18,  18, ..., 149, 138, 120], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  400
+Record:  (399, array([  3, 205, 195, ..., 152, 153, 151], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  500
+Record:  (499, array([  4, 224, 209, ..., 186, 187, 209], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  600
+Record:  (599, array([  9, 194, 196, ...,  91,  91,  93], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  700
+Record:  (699, array([  9, 217, 215, ...,  27,  27,  28], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  800
+Record:  (799, array([ 5, 19, 21, ..., 57, 52, 42], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  900
+Record:  (899, array([  8, 185, 184, ..., 110, 109, 106], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1000
+Record:  (999, array([  7, 154, 148, ...,  84, 100, 102], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1100
+Record:  (1099, array([  5, 218, 140, ..., 236, 230, 248], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1200
+Record:  (1199, array([  2, 140,  70, ...,  48,  64,  86], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1300
+Record:  (1299, array([ 2, 46, 48, ..., 49, 54, 74], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1400
+Record:  (1399, array([  6, 204, 193, ..., 117, 113, 164], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1500
+Record:  (1499, array([ 5, 90, 92, ..., 13,  6,  6], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1600
+Record:  (1599, array([  2, 144, 148, ...,  76,  71,  58], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1700
+Record:  (1699, array([  4, 106, 101, ..., 135, 123, 155], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1800
+Record:  (1799, array([  6, 111, 144, ...,  81,  83,  76], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  1900
+Record:  (1899, array([  9, 236, 250, ...,  37,  35,  32], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2000
+Record:  (1999, array([  2, 176, 175, ..., 174, 180, 188], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2100
+Record:  (2099, array([ 6, 47, 89, ..., 18, 10, 13], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2200
+Record:  (2199, array([  0, 123, 117, ..., 115, 165, 236], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2300
+Record:  (2299, array([  7, 147, 146, ...,  59,  59,  58], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2400
+Record:  (2399, array([  0, 163, 166, ...,  61,  56,  55], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2500
+Record:  (2499, array([ 8, 15, 10, ..., 37, 20, 36], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2600
+Record:  (2599, array([  9, 255, 252, ..., 253, 253, 253], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2700
+Record:  (2699, array([  8, 245, 247, ..., 225, 231, 235], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2800
+Record:  (2799, array([  8, 224, 222, ..., 192, 197, 209], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  2900
+Record:  (2899, array([  1, 135, 142, ...,  47,  46,  46], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3000
+Record:  (2999, array([  3, 177, 176, ..., 183, 170, 143], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3100
+Record:  (3099, array([  2, 255, 255, ..., 255, 254, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3200
+Record:  (3199, array([  9, 122, 122, ..., 183, 183, 175], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3300
+Record:  (3299, array([ 4, 66, 68, ..., 48, 42, 33], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3400
+Record:  (3399, array([  5, 128, 130, ...,  73,  60,  58], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3500
+Record:  (3499, array([  4, 249, 249, ..., 147, 188, 169], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3600
+Record:  (3599, array([  5, 173, 171, ...,  76, 170, 225], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3700
+Record:  (3699, array([  8, 218, 214, ..., 159, 161, 159], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3800
+Record:  (3799, array([  3, 202, 173, ...,  91,  95,  89], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  3900
+Record:  (3899, array([ 8, 15, 12, ..., 15, 13,  9], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4000
+Record:  (3999, array([ 5, 11, 11, ..., 63, 39, 25], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4100
+Record:  (4099, array([ 6, 22, 61, ..., 28, 46, 34], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4200
+Record:  (4199, array([  8, 214, 235, ..., 121, 123, 129], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4300
+Record:  (4299, array([  0, 242, 230, ..., 213, 212, 219], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4400
+Record:  (4399, array([ 3, 40, 43, ..., 29, 29, 31], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4500
+Record:  (4499, array([  1, 175, 182, ...,  83,  85,  80], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4600
+Record:  (4599, array([  0, 145, 141, ..., 206, 208, 209], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4700
+Record:  (4699, array([  9, 200, 203, ..., 106, 106, 102], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4800
+Record:  (4799, array([  0, 214, 217, ..., 125, 125, 123], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  4900
+Record:  (4899, array([ 5, 48, 47, ..., 27, 29, 27], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5000
+Record:  (4999, array([  6, 171, 167, ...,   2,   4,   3], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5100
+Record:  (5099, array([  1, 196, 100, ..., 155, 151, 155], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5200
+Record:  (5199, array([ 4, 11, 12, ..., 47, 51, 48], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5300
+Record:  (5299, array([ 4, 67, 65, ..., 90, 81, 96], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5400
+Record:  (5399, array([  1, 175, 212, ..., 214, 216, 210], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5500
+Record:  (5499, array([ 5,  2,  2, ..., 54, 56, 81], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5600
+Record:  (5599, array([ 1, 68, 58, ..., 81, 88, 94], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5700
+Record:  (5699, array([  7, 122, 131, ...,  90,  81,  85], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5800
+Record:  (5799, array([  6, 254, 252, ..., 255, 255, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  5900
+Record:  (5899, array([  1,  78,  55, ..., 127, 133, 140], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6000
+Record:  (5999, array([  7, 196, 193, ..., 171, 189, 194], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6100
+Record:  (6099, array([  1, 122, 123, ..., 144, 131, 131], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6200
+Record:  (6199, array([  8,  33,  32, ..., 209, 210, 200], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6300
+Record:  (6299, array([  2, 199, 198, ...,  86,  94, 106], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6400
+Record:  (6399, array([  3, 196, 194, ..., 155, 157, 161], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6500
+Record:  (6499, array([  8, 220, 223, ..., 128, 183, 161], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6600
+Record:  (6599, array([  9, 255, 255, ..., 255, 255, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6700
+Record:  (6699, array([  8, 252, 248, ...,  95,  95, 104], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6800
+Record:  (6799, array([  3, 157, 135, ...,  50,  47,  37], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  6900
+Record:  (6899, array([  5,  71,  59, ..., 252, 248, 248], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7000
+Record:  (6999, array([  9, 213, 192, ..., 188, 184, 183], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7100
+Record:  (7099, array([  7, 173, 178, ..., 238, 236, 246], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7200
+Record:  (7199, array([  2, 103,  84, ...,  29,  28,  27], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7300
+Record:  (7299, array([  9,  70,  62, ..., 171, 167, 162], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7400
+Record:  (7399, array([  4,  98,  95, ...,  86, 101,  84], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7500
+Record:  (7499, array([ 6, 55, 54, ..., 14,  7, 12], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7600
+Record:  (7599, array([  0, 245, 243, ...,  95,  95,  96], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7700
+Record:  (7699, array([  9, 152, 138, ...,  79,  78,  76], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7800
+Record:  (7799, array([  0, 137, 136, ..., 173, 172, 171], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  7900
+Record:  (7899, array([  5, 166, 111, ..., 128, 104,  85], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8000
+Record:  (7999, array([  8, 244, 241, ..., 226, 228, 233], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8100
+Record:  (8099, array([  7, 101,  97, ...,  19,  18,  22], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8200
+Record:  (8199, array([  5, 255, 251, ..., 220, 220, 221], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8300
+Record:  (8299, array([  8, 210, 214, ..., 146, 145, 144], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8400
+Record:  (8399, array([ 4, 73, 63, ..., 91, 96, 85], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8500
+Record:  (8499, array([ 2, 44, 36, ..., 92, 58, 94], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8600
+Record:  (8599, array([  3, 189, 187, ..., 147, 125,  99], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8700
+Record:  (8699, array([  4, 179, 177, ..., 217, 217, 219], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8800
+Record:  (8799, array([  1, 125, 137, ..., 131, 129, 126], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  8900
+Record:  (8899, array([  1, 255, 245, ..., 253, 254, 254], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9000
+Record:  (8999, array([  3, 175, 172, ...,  78,  90,  90], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9100
+Record:  (9099, array([  2, 125, 160, ..., 101, 106, 107], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9200
+Record:  (9199, array([  4, 134, 137, ...,  33,  24,  61], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9300
+Record:  (9299, array([  3,   4,   5, ...,  69, 106, 114], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9400
+Record:  (9399, array([  5,  90,  94, ..., 184, 183, 183], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9500
+Record:  (9499, array([  3, 100,  94, ...,  58,  34,  24], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9600
+Record:  (9599, array([  3, 118, 118, ..., 134, 133,  95], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9700
+Record:  (9699, array([ 4, 78, 61, ..., 63, 86, 58], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9800
+Record:  (9799, array([  0,  97,  98, ..., 174, 172, 170], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  9900
+Record:  (9899, array([  8, 105, 104, ...,  17,  21,  27], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  10000
+Record:  (9999, array([  1, 229, 236, ..., 173, 162, 161], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')
+Read record number  10100
+Record:  (99, array([  5, 143, 110, ...,  31,  23,  14], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10200
+Record:  (199, array([  7,  49,   2, ..., 214, 216, 216], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10300
+Record:  (299, array([  8, 215, 209, ...,  43,  18,  38], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10400
+Record:  (399, array([  1, 223, 231, ...,  81,  80,  81], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10500
+Record:  (499, array([  4, 211, 222, ..., 134, 149, 137], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10600
+Record:  (599, array([  7, 172, 201, ..., 102,  93, 103], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10700
+Record:  (699, array([  0, 141, 139, ...,  68,  68,  68], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10800
+Record:  (799, array([  4, 217, 217, ..., 184, 184, 193], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  10900
+Record:  (899, array([  9, 122, 116, ...,  48,  50,  52], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11000
+Record:  (999, array([  1,  94,  98, ..., 142, 145, 142], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11100
+Record:  (1099, array([ 6, 36, 46, ..., 57, 80, 73], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11200
+Record:  (1199, array([  3,  90,  76, ..., 255, 187, 143], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11300
+Record:  (1299, array([  6, 133, 168, ..., 157, 164, 141], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11400
+Record:  (1399, array([  9, 216, 232, ..., 103, 108, 113], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11500
+Record:  (1499, array([  3, 234, 225, ..., 196, 201, 206], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11600
+Record:  (1599, array([  1, 243, 240, ..., 145, 148, 150], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11700
+Record:  (1699, array([  4, 140, 136, ...,  13,  12,  10], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11800
+Record:  (1799, array([  4, 144, 160, ...,  92, 114, 125], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  11900
+Record:  (1899, array([ 1, 10, 14, ..., 91, 86, 79], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12000
+Record:  (1999, array([  2, 237, 243, ..., 212, 220, 225], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12100
+Record:  (2099, array([  1,  68,  71, ..., 143, 141, 138], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12200
+Record:  (2199, array([ 5, 57, 63, ..., 92, 94, 97], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12300
+Record:  (2299, array([  2,  87,  89, ..., 138,  99,  51], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12400
+Record:  (2399, array([  7, 249, 249, ...,  45,  45,  43], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12500
+Record:  (2499, array([  2, 230, 129, ..., 144,  71, 108], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12600
+Record:  (2599, array([  6, 119,  88, ..., 177, 181, 186], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12700
+Record:  (2699, array([  6, 202, 181, ...,  48,   5,  47], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12800
+Record:  (2799, array([  4, 152, 148, ...,  95,  85,  74], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  12900
+Record:  (2899, array([ 2, 26, 26, ..., 56, 80, 84], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13000
+Record:  (2999, array([ 5, 76, 84, ..., 66, 69, 65], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13100
+Record:  (3099, array([  4,  40,  38, ..., 113,  46,  23], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13200
+Record:  (3199, array([  5, 130, 122, ...,  33,  35,  42], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13300
+Record:  (3299, array([ 7, 68, 57, ..., 47, 21, 20], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13400
+Record:  (3399, array([ 1, 55, 61, ..., 72, 69, 64], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13500
+Record:  (3499, array([ 4, 61, 64, ..., 83, 78, 78], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13600
+Record:  (3599, array([ 1, 88, 71, ..., 60, 62, 60], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13700
+Record:  (3699, array([  2, 162, 163, ...,  91, 105, 100], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13800
+Record:  (3799, array([  6,  84,  85, ..., 137, 145, 113], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  13900
+Record:  (3899, array([  2, 192, 178, ...,  82,  78,  92], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14000
+Record:  (3999, array([  0, 107, 100, ...,  98, 101, 104], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14100
+Record:  (4099, array([  3, 182, 179, ...,  73,  71,  69], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14200
+Record:  (4199, array([  3, 164, 137, ..., 126, 136, 105], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14300
+Record:  (4299, array([  5, 106, 103, ...,  20,  17,  15], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14400
+Record:  (4399, array([  9, 126, 124, ..., 128, 120, 116], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14500
+Record:  (4499, array([  2, 119, 121, ...,  44,  42,  44], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14600
+Record:  (4599, array([  7,  55,  48, ..., 112, 116, 115], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14700
+Record:  (4699, array([ 4, 34, 31, ..., 38, 44, 50], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14800
+Record:  (4799, array([ 0, 58, 43, ..., 50, 49, 45], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  14900
+Record:  (4899, array([  7, 152, 155, ..., 151, 150, 146], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15000
+Record:  (4999, array([  3, 188, 202, ...,  96, 135, 149], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15100
+Record:  (5099, array([  6, 126, 133, ...,  63, 107, 116], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15200
+Record:  (5199, array([  8, 180, 177, ..., 139, 147, 148], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15300
+Record:  (5299, array([  3,  94,  89, ..., 148, 146, 144], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15400
+Record:  (5399, array([  1,  31,  39, ..., 114, 128, 133], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15500
+Record:  (5499, array([ 6, 29, 22, ..., 24, 28, 43], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15600
+Record:  (5599, array([  0, 194, 198, ..., 104, 103, 100], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15700
+Record:  (5699, array([  9, 143, 151, ..., 146, 142, 140], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15800
+Record:  (5799, array([  1,  76,  79, ..., 110, 105,  95], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  15900
+Record:  (5899, array([  3,  59,  90, ..., 253, 252, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16000
+Record:  (5999, array([  8, 163, 161, ..., 108, 109, 111], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16100
+Record:  (6099, array([  9, 255, 254, ...,  65,  73,  69], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16200
+Record:  (6199, array([  4, 255, 251, ...,  72,  61,  95], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16300
+Record:  (6299, array([ 8,  0,  0, ..., 21, 20, 20], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16400
+Record:  (6399, array([  7, 255, 255, ..., 152, 151, 147], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16500
+Record:  (6499, array([  7, 201, 198, ..., 255, 255, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16600
+Record:  (6599, array([  3, 207, 207, ...,  89,  87,  99], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16700
+Record:  (6699, array([  2, 140, 139, ...,  13,  26,  35], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16800
+Record:  (6799, array([  8, 170, 168, ..., 155, 158, 160], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  16900
+Record:  (6899, array([  5,  21,  22, ..., 114, 115, 115], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17000
+Record:  (6999, array([  7, 254, 255, ...,  56,  60,  60], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17100
+Record:  (7099, array([ 5, 79, 66, ..., 73, 74, 78], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17200
+Record:  (7199, array([  0,  80,  81, ..., 113, 118, 123], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17300
+Record:  (7299, array([  8, 141, 156, ..., 178, 181, 181], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17400
+Record:  (7399, array([  3, 180, 187, ..., 176, 180, 175], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17500
+Record:  (7499, array([  9, 203, 160, ..., 146, 139, 142], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17600
+Record:  (7599, array([  4, 217, 219, ...,  50,  52,  56], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17700
+Record:  (7699, array([ 6, 42, 37, ..., 22, 28, 45], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17800
+Record:  (7799, array([  1, 106,  99, ..., 180, 194, 183], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  17900
+Record:  (7899, array([ 5, 42, 15, ..., 81, 76, 68], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18000
+Record:  (7999, array([  0, 185, 188, ..., 108, 120, 117], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18100
+Record:  (8099, array([  5,  16,  53, ...,  95, 137, 123], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18200
+Record:  (8199, array([ 5, 32, 83, ..., 26, 17, 18], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18300
+Record:  (8299, array([  0, 119, 110, ...,  50,  51,  52], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18400
+Record:  (8399, array([  2, 152, 151, ...,  44,  59,  67], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18500
+Record:  (8499, array([  0,  83,  81, ..., 253, 254, 255], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18600
+Record:  (8599, array([  8, 250, 248, ..., 132, 127, 120], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18700
+Record:  (8699, array([  3,  70,  75, ..., 157, 155,  94], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18800
+Record:  (8799, array([  1, 212, 211, ...,   7,   8,  27], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  18900
+Record:  (8899, array([  8, 127, 127, ...,  57,  55,  53], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19000
+Record:  (8999, array([  3, 195, 193, ...,  21,  23,  24], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19100
+Record:  (9099, array([  9, 255, 254, ..., 235, 237, 243], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19200
+Record:  (9199, array([  9, 225, 223, ...,  56,  56,  58], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19300
+Record:  (9299, array([  8, 255, 252, ..., 252, 252, 252], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19400
+Record:  (9399, array([  3, 114, 112, ..., 168, 168, 168], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19500
+Record:  (9499, array([  2,  83,  86, ..., 252, 251, 254], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19600
+Record:  (9599, array([  3, 143, 148, ...,  66,  54,  49], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19700
+Record:  (9699, array([  9, 129, 129, ..., 154, 152, 153], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19800
+Record:  (9799, array([  7, 121, 120, ...,  89,  90,  92], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  19900
+Record:  (9899, array([  0, 127, 117, ...,  62,  68,  62], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Read record number  20000
+Record:  (9999, array([  8, 235, 239, ..., 182, 175, 174], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_4.bin')
+Number of records read  20000
+(0, array([  1, 255, 252, ..., 173, 231, 248], dtype=uint8), '/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/test/../../resources/test/data_batch_5.bin')

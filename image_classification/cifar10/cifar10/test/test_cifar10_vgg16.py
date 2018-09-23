@@ -1,7 +1,7 @@
 import unittest
 
-import cifar10.cifar10_loader as cl
-import cifar10.cifar10_vgg16_model as cm
+import cifar10.dataloader.cifar10_loader as cl
+import cifar10.networking.cifar10_vgg16_model as cm
 
 import numpy as np
 
@@ -12,10 +12,13 @@ class FixedLengthRecordReaderTestCase(unittest.TestCase):
 
     def test_model_static(self):
         print("========================= test_model_static")
-        labels, images = cl.load_data_set(max_records=1)
+        tf.reset_default_graph()
+        config = cl.LoaderDataSetConfig()
+        config.max_records = 1
+        labels, images = cl.load_data_set(config=config)
         print("Read [%s] images and [%s] labels." % (len(images), len(labels)))
 
-        model = cm.forward_propagation(input=images, batch_size=1)
+        model = cm.forward_propagation(input=images, parameters=cm.initialize_parameters())
 
         assert(model is not None)
 
@@ -28,17 +31,15 @@ class FixedLengthRecordReaderTestCase(unittest.TestCase):
         print("labels: ", np.array(labels).shape)
         print(labels)
         print("========================= test_model_static")
-        # print("Records: ", len(records))
-        # print("labels: ", len(labels))
-        # print("Item0: ", records[0])
 
     def test_model_static_batches(self):
         print("========================= test_model_static_batches")
-        labels, images = cl.load_data_set(max_records=50)
+        tf.reset_default_graph()
+        config = cl.LoaderDataSetConfig()
+        config.max_records = 50
+        labels, images = cl.load_data_set(config=config)
         print("Read [%s] images and [%s] labels." % (len(images), len(labels)))
-        var_names = ['conv1_test2', 'conv2_test2', 'conv3_test2', 'conv4_test2', 'fc1_test2', 'fc2_test2',
-                     'softmax_linear_test2']
-        model = cm.forward_propagation(input=images, variable_names=var_names, batch_size=50)
+        model = cm.forward_propagation(input=images, parameters=cm.initialize_parameters())
 
         assert(model is not None)
 
@@ -58,13 +59,15 @@ class FixedLengthRecordReaderTestCase(unittest.TestCase):
 
     def test_model_static_multiple_batches(self):
         print("========================= test_model_static_batches")
-        labels, images = cl.load_data_set(max_records=cm.BATCH_SIZE*2)
+        tf.reset_default_graph()
+
+        config = cl.LoaderDataSetConfig()
+        config.max_records = cm.BATCH_SIZE*2
+        labels, images = cl.load_data_set(config=config)
         print("Read [%s] images and [%s] labels." % (len(images), len(labels)))
-        var_names = ['conv1_test3', 'conv2_test3', 'conv3_test3', 'conv4_test3', 'fc1_test3', 'fc2_test3',
-                     'softmax_linear_test3']
         input_placeholder, labels_placeholder = cm.create_placeholder()
 
-        model = cm.forward_propagation(input=input_placeholder, variable_names=var_names)
+        model = cm.forward_propagation(input=input_placeholder, parameters=cm.initialize_parameters())
         cost = cm.compute_cost(model, tf.one_hot(labels_placeholder, 10))
         optimizer = cm.backward_propagation(cost)
 
