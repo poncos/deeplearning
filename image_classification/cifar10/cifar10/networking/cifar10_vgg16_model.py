@@ -87,16 +87,4 @@ def forward_propagation(input, parameters):
     return softmax_linear
 
 
-def compute_cost(logits, labels):
-    # loss = tf.losses.mean_squared_error(labels=labels, predictions=logits)
-    loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=labels))
-
-    return loss
-
-
-def backward_propagation(cost, learning_rate=LEARNING_RATE):
-    optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(cost)
-
-    return optimizer
-
 
