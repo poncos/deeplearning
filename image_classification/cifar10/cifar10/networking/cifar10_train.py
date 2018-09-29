@@ -79,14 +79,14 @@ def train(images, labels, x_placeholder, y_placeholder, cost_fnc, train_fnc, acc
                 accuracy_train = evaluate(session, accuracy_fnc, x_placeholder, y_placeholder,
                                                 images, labels)
                 accuracy_values.append(accuracy_train)
-                print("Accuracy (training):  %f%% and cost %f%% for epoch %f%%"
+                print("Accuracy (training):  %f and cost %f for epoch %f"
                       % (accuracy_train, (epoch_cost / NUM_BATCHES), epoch))
 
             costs_values.append(epoch_cost / NUM_BATCHES)
         saver.save(session, constants.MODEL_DIR_PATH, global_step=epoch)
 
         accuracy_eval = evaluate_with_evaluation_data_set(session, accuracy_fnc, x_placeholder, y_placeholder)
-        print("Accuracy (evaluation): %f%%" % accuracy_eval)
+        print("Accuracy (evaluation): %f" % accuracy_eval)
 
         return costs_values, accuracy_values
 
