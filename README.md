@@ -12,7 +12,7 @@ Each example is placed in its own folder isolated from every other examples, and
 folder is the common utils packages which can be found in the folder *deeplearning/utils*.
 
 
-##CIFAR-10 dataset and image classification
+## CIFAR-10 dataset and image classification
 
 This project builds a tensorflow model to clasify images of ten different classes using the
 [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset. The idea of the project is not new and a similar example
