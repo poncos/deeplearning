@@ -16,7 +16,7 @@ folder is the common utils packages which can be found in the folder *deeplearni
 
 This project builds a tensorflow model to clasify images of ten different classes using the
 [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset. The idea of the project is not new and a similar example
-can be found within the []tensorflow github repository] (https://github.com/tensorflow/models), but to be honest
+can be found within the [tensorflow github repository] (https://github.com/tensorflow/models), but to be honest
 it is difficult to me understand the implementation available in that repository, and furthermore, my implementation
 approach is different in the sense that in this repository the tensorflow APIs are used exclusively to build the 
 neural network model, but everything else is purely python and numpy (like image pre-processing, dataset loading).
