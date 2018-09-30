@@ -27,6 +27,7 @@ def plot(values, xname, yname, title):
 def initialize_variables_or_restore(session, saver):
 
     if os.path.isfile(os.path.join(constants.MODEL_DIR_PATH, constants.MODEL_PREFIX + ".index")):
+        print("Initializing parameters with pre-trained model [%s]: " % (constants.MODEL_PREFIX + ".index"))
         model_file = os.path.join(constants.MODEL_DIR_PATH, constants.MODEL_PREFIX)
         saver.restore(session, model_file)
     else:
@@ -48,7 +49,7 @@ def evaluate(session, accuracy, input_placeholder, labels_holder, images, labels
 
 
 def evaluate_with_evaluation_data_set(session, accuracy, input_placeholder, labels_holder):
-    labels, images = cl.load_data_set(max_records=10000, evaluate=True)
+    labels, images = cl.load_data_set(evaluate=True)
     return evaluate(session, accuracy, input_placeholder, labels_holder, images, labels)
 
 

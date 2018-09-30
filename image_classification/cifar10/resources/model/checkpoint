@@ -1,0 +1,5 @@
+model_checkpoint_path: "/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/../resources/model/-60"
+all_model_checkpoint_paths: "/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/../resources/model/-0"
+all_model_checkpoint_paths: "/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/../resources/model/-20"
+all_model_checkpoint_paths: "/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/../resources/model/-40"
+all_model_checkpoint_paths: "/store/ml/tensorflow/deeplearning/image_classification/cifar10/cifar10/../resources/model/-60"

@@ -1,6 +1,7 @@
 
-import main.image_utils as iutils
-import cifar10.cifar10_vgg16_model as cm
+import utils.image_utils as iutils
+import cifar10.networking.cifar10_vgg16_model as cm
+import cifar10.constants as constants
 
 from tkinter import *
 import os
@@ -10,13 +11,7 @@ from PIL import Image
 
 import tensorflow as tf
 
-NUM_TRAINING_RECORDS = 10000
-
-CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-
-MODEL_FILE_PREFIX = os.path.join(CURRENT_DIR_PATH, '../../resources/model/-980')
-
-print("current dir %s" % CURRENT_DIR_PATH)
+import sys
 
 CLASSES = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
@@ -25,10 +20,10 @@ def preprocess_image(image_data):
     pass
 
 
-def cifar10_predict_main():
+def cifar10_predict_main(image_path_file):
     var_names = ['conv1_test3', 'conv2_test3', 'conv3_test3', 'conv4_test3', 'fc1_test3', 'fc2_test3',
                  'softmax_linear_test3']
-    img = Image.open("/store/datasets/downloaded_images/animals/cat/cat3.jpg", mode="r")
+    img = Image.open(image_path_file, mode="r")
     img_bytes = img.tobytes()
     width, height = img.size
 
@@ -44,12 +39,14 @@ def cifar10_predict_main():
 
     with tf.Session() as sess:
         # Restore variables from disk.
-        # saver.restore(sess, "/tmp/model/-980")
-        saver.restore(sess, MODEL_FILE_PREFIX)
+        saver.restore(sess, constants.MODEL_FILE_PREFIX)
         result = sess.run(model)
 
         print("Result: ", CLASSES[np.argmax(result[0])])
 
 
 if __name__ == '__main__':
-    cifar10_predict_main()
+    if sys.argv != 2:
+        print("ERROR USAGE %s <image to clasify>" % sys.argv[0])
+
+    cifar10_predict_main(sys.argv[1])

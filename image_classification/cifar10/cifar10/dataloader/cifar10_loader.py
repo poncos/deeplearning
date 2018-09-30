@@ -29,7 +29,7 @@ DEFAULT_CONFIG = LoaderDataSetConfig
 
 def unpack_dataset(config):
     dirpath = tempfile.mkdtemp()
-    print("Unpacking the cifar10 dataset in the path %s" % dirpath)
+    print("Unpacking the cifar10 dataset in path %s" % dirpath)
 
     fname = os.path.join(config.cifar_data_dir, config.cifar_input_file + config.cifar_input_file_ext)
     tar = tarfile.open(fname, "r:gz")
@@ -59,7 +59,7 @@ def load_data_set(config=DEFAULT_CONFIG):
     record_number = 0
 
     sequence, record, source = reader.read()
-    print("Read ", len(record), " records")
+    print("Read record with length [%d] " % len(record))
 
     while record is not None:
         if config.max_records != -1 and record_number == config.max_records:
