@@ -21,8 +21,7 @@ it is difficult to me understand the implementation available in that repository
 approach is different in the sense that in this repository the tensorflow APIs are used exclusively to build the 
 neural network model, but everything else is purely python and numpy (like image pre-processing, dataset loading).
 
-Apart from the model, main python scripts are provided to load an arbitrary image and classify it after execute the 
-pre-processing to reduce the image dimension.  
+Apart from the model, main python scripts are provided to load an arbitrary image, pre-process it and classify it. 
 
 
 ### Project structure
