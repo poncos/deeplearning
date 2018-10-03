@@ -1,13 +1,13 @@
 #!/bin/bash
 
+# Example usage:
+## sh run_inference.sh `pwd`/../resources/test/images/cat3.jpg
+
 PYTHON_CMD=python3.5
 
 USER_DIR=`pwd`
 SCRIPT_DIR=$(dirname "$0")
-echo "USER_DIR: ${USER_DIR}"
-echo "SCRIPT_DIR: ${SCRIPT_DIR}"
 BASE_DIR="${USER_DIR}/${SCRIPT_DIR}"
-echo "BASEDIR: ${BASE_DIR}"
 
 export PYTHONPATH="${BASE_DIR}/..:${BASE_DIR}/../../../utils"
 

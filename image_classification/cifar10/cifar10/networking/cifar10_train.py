@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-NUM_EPOCHS = 400
+NUM_EPOCHS = 200
 NUM_TRAINING_RECORDS = 50000
 NUM_EVALUATION_RECORDS = 10000
 LEARNING_RATE = 0.0001
@@ -39,18 +39,25 @@ def initialize_variables_or_restore(session, saver):
 
 def evaluate(session, accuracy, input_placeholder, labels_holder, images, labels):
     accuracy_value = 0
-    for i in range(NUM_BATCHES):
+    num_batches = len(images) // cm.BATCH_SIZE
+    for i in range(num_batches):
         minibatch = images[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i]
         minibatch_labels = labels[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i]
 
         accuracy_value += session.run([accuracy],
                                       feed_dict={input_placeholder: minibatch, labels_holder: minibatch_labels})[0]
-    return accuracy_value/NUM_BATCHES
+    return accuracy_value/num_batches
 
 
-def evaluate_with_evaluation_data_set(session, accuracy, input_placeholder, labels_holder):
-    labels, images = cl.load_data_set(evaluate=True)
-    return evaluate(session, accuracy, input_placeholder, labels_holder, images, labels)
+def evaluate_with_evaluation_data_set(session, accuracy, x_placeholder, y_placeholder):
+    loader_config = cl.LoaderDataSetConfig()
+    loader_config.load_evaluate_dataset = True
+
+    print("Reading evaluation dataset")
+    labels, images = cl.load_data_set(config=loader_config)
+    print("Read [%s] images and [%s] labels." % (len(images), len(labels)))
+
+    return evaluate(session, accuracy, x_placeholder, y_placeholder, images, labels)
 
 
 def train(images, labels, x_placeholder, y_placeholder, cost_fnc, train_fnc, accuracy_fnc):

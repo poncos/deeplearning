@@ -9,17 +9,17 @@ class Dimension2d:
         self.height = height
 
 
-def convolve_1d_rgb(image, dimension2d, targetdimension):
-    kernel_w = dimension2d.width // targetdimension.width
-    kernel_h = dimension2d.height // targetdimension.height
+def reduce_dim_average(image, original_dimension, target_dimension):
+    kernel_w = original_dimension.width // target_dimension.width
+    kernel_h = original_dimension.height // target_dimension.height
 
-    result = [[[0, 0, 0] for _ in range(targetdimension.height)] for _ in range(targetdimension.width)]
+    result = [[[0, 0, 0] for _ in range(target_dimension.height)] for _ in range(target_dimension.width)]
 
-    kernel_window_h = [i for i in range(0, dimension2d.height, kernel_h)][0:targetdimension.height]
-    kernel_window_w = [i for i in range(0, dimension2d.width, kernel_w)][0:targetdimension.width]
+    kernel_window_h = [i for i in range(0, original_dimension.height, kernel_h)][0:target_dimension.height]
+    kernel_window_w = [i for i in range(0, original_dimension.width, kernel_w)][0:target_dimension.width]
 
-    kernel_window_h.append(dimension2d.height)
-    kernel_window_w.append(dimension2d.width)
+    kernel_window_h.append(original_dimension.height)
+    kernel_window_w.append(original_dimension.width)
     result_x = 0
     result_y = 0
 
@@ -44,7 +44,7 @@ def convolve_1d_rgb(image, dimension2d, targetdimension):
             kernel_x = x[1] - x[0]
             factor = kernel_y * kernel_x
             for dy in range(kernel_y):
-                y_offset_1d = dimension2d.width * (y[0] + dy)
+                y_offset_1d = original_dimension.width * (y[0] + dy)
                 for dx in range(kernel_x):
                     offset_1d = (y_offset_1d + x[0] + dx) * 3
                     r = image[offset_1d]

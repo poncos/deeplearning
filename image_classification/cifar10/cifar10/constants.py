@@ -8,5 +8,5 @@ DATA_DIR_PATH = os.path.join(LOCAL_ROOT_DIR, DATA_DIR)
 MODEL_DIR = '../resources/model/'
 MODEL_DIR_PATH = os.path.join(LOCAL_ROOT_DIR, MODEL_DIR)
 
-MODEL_PREFIX = '-60'
+MODEL_PREFIX = 'MODEL'
 

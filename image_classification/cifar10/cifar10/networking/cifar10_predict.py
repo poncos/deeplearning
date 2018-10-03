@@ -1,7 +1,6 @@
 
 import utils.image_utils as iutils
 import cifar10.networking.cifar10_vgg16_model as cm
-import cifar10.constants as constants
 
 from tkinter import *
 import os
@@ -10,6 +9,7 @@ import numpy as np
 from PIL import Image
 
 import tensorflow as tf
+import cifar10.constants as project_constants
 
 import sys
 
@@ -21,32 +21,31 @@ def preprocess_image(image_data):
 
 
 def cifar10_predict_main(image_path_file):
-    var_names = ['conv1_test3', 'conv2_test3', 'conv3_test3', 'conv4_test3', 'fc1_test3', 'fc2_test3',
-                 'softmax_linear_test3']
     img = Image.open(image_path_file, mode="r")
     img_bytes = img.tobytes()
     width, height = img.size
 
-    reduced_image = iutils.convolve_1d_rgb(img_bytes, iutils.Dimension2d(width, height), iutils.Dimension2d(32, 32))
-    input_img = [None]*cm.BATCH_SIZE
-    for i in range(cm.BATCH_SIZE):
-        input_img[i] = reduced_image
+    print("reducing dimension for loaded image [%s]" % image_path_file)
+    reduced_image = iutils.reduce_dim_average(img_bytes, iutils.Dimension2d(width, height), iutils.Dimension2d(32, 32))
+    print("new image shape: ", np.array(reduced_image).shape)
+    parameters = cm.initialize_parameters()
 
-    print("Shape: ", np.array(input_img).shape)
-    model = cm.forward_propagation(input=np.array(input_img, dtype=np.float32), variable_names=var_names)
+    model = cm.forward_propagation(input=np.array([reduced_image], dtype=np.float32), parameters=parameters)
 
     saver = tf.train.Saver()
-
     with tf.Session() as sess:
         # Restore variables from disk.
-        saver.restore(sess, constants.MODEL_FILE_PREFIX)
+        model_file = os.path.join(project_constants.MODEL_DIR_PATH, project_constants.MODEL_PREFIX)
+        saver.restore(sess, model_file)
         result = sess.run(model)
 
         print("Result: ", CLASSES[np.argmax(result[0])])
 
 
 if __name__ == '__main__':
-    if sys.argv != 2:
+
+    if len(sys.argv) != 2:
         print("ERROR USAGE %s <image to clasify>" % sys.argv[0])
+        exit(1)
 
     cifar10_predict_main(sys.argv[1])
