@@ -1,52 +1,50 @@
 
-import main.cifar10_vgg16_model as cm
-import main.cifar10_loader as cl
+import cifar10.networking.cifar10_vgg16_model as cm
+import cifar10.constants as project_constants
+import cifar10.dataloader.cifar10_loader as cl
 
 import os
+import numpy as np
 
 import tensorflow as tf
 
-import operator
 
-NUM_TRAINING_RECORDS = 10000
+def evaluate(session, accuracy, input_placeholder, labels_holder, images, labels):
+    accuracy_value = 0
+    num_batches = len(images) // cm.BATCH_SIZE
+    for i in range(num_batches):
+        minibatch = images[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i]
+        minibatch_labels = labels[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i]
 
-CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+        accuracy_value += session.run([accuracy],
+                                      feed_dict={input_placeholder: minibatch, labels_holder: minibatch_labels})[0]
+    return accuracy_value/num_batches
 
-MODEL_FILE_PREFIX = os.path.join(CURRENT_DIR_PATH, '../../resources/model/-980')
-
-print("current dir %s" % CURRENT_DIR_PATH)
 
 def cifar10_evaluate_main():
-    var_names = ['conv1_test3', 'conv2_test3', 'conv3_test3', 'conv4_test3', 'fc1_test3', 'fc2_test3',
-                 'softmax_linear_test3']
-    input_placeholder, labels_placeholder = cm.create_placeholder()
+    loader_config = cl.LoaderDataSetConfig()
+    loader_config.load_evaluate_dataset = True
 
-    model = cm.forward_propagation(input=input_placeholder, variable_names=var_names)
+    print("Reading evaluation dataset")
+    labels, images = cl.load_data_set(config=loader_config)
+    print("Read [%s] images and [%s] labels." % (len(images), len(labels)))
+
+    x_placeholder, y_placeholder = cm.create_placeholder()
+    parameters = cm.initialize_parameters()
+
+    logits = cm.forward_propagation(input=x_placeholder, parameters=parameters)
+    correct_prediction = tf.equal(tf.cast(tf.argmax(logits, 1), tf.int32), y_placeholder)
+    accuracy_fnc = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
     saver = tf.train.Saver()
-
-    labels, images = cl.load_data_set(max_records=50000, evaluate=True)
-
     with tf.Session() as sess:
         # Restore variables from disk.
-        # saver.restore(sess, "/tmp/model/-980")
-        saver.restore(sess, MODEL_FILE_PREFIX)
-        num_batches = int(NUM_TRAINING_RECORDS / cm.BATCH_SIZE)
+        model_file = os.path.join(project_constants.MODEL_DIR_PATH, project_constants.MODEL_PREFIX)
+        saver.restore(sess, model_file)
 
+        accuracy_eval = evaluate(sess, accuracy_fnc, x_placeholder, y_placeholder, images, labels)
 
-        predicted_classes = []
-        for i in range(num_batches):
-            predictions = model.eval(
-                {input_placeholder: images[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i],
-                 labels_placeholder: labels[cm.BATCH_SIZE * i:cm.BATCH_SIZE + cm.BATCH_SIZE * i]})
-
-            for prediction in predictions:
-                predicted_class = prediction.tolist().index(max(prediction))
-                predicted_classes.append(predicted_class)
-
-        accuracy = 100 - sum([0 if x == 0 else 1 for x in
-                              list(map(operator.sub, predicted_classes, labels))]) * 100 / len(predicted_classes)
-        print("Accuracy: %f%%" % accuracy)
+        print("Accuracy (evaluation): %f" % accuracy_eval)
 
 
 if __name__ == '__main__':
